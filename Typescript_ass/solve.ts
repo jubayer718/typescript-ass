@@ -8,4 +8,10 @@ function formatString(input: string, toUpper?: boolean):string {
   }
 }
 
-console.log(formatString("Jubayer"));
+
+function filterByRating(items: { title: string; rating: number }[]) {
+  const filteredValue = items.filter((item) => item.rating>4||item.rating===4)
+  return filteredValue
+}
+
+
