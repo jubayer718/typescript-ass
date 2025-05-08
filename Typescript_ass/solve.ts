@@ -20,3 +20,12 @@ function concatenateArrays<T>(...arrays: T[][]) {
   return concatValue
   
 }
+
+
+function processValue(value: string | number) {
+  if (typeof value === "string") {
+    return value.length;
+  } else {
+    return value*2
+  }
+}

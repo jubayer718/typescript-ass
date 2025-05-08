@@ -15,6 +15,12 @@ function concatenateArrays(...arrays) {
     let concatValue = arrays.reduce((acc, curr) => acc.concat(curr), []);
     return concatValue;
 }
-const x = concatenateArrays(["a", "b"], ["c"]); // Output: ["a", "b", "c"]
-const y = concatenateArrays([1, 2], [3, 4], [5]); // Output: [1, 2, 3, 4, 5]
-console.log(x, y);
+function processValue(value) {
+    if (typeof value === "string") {
+        return value.length;
+    }
+    else {
+        return value * 2;
+    }
+}
+console.log(processValue(22));
