@@ -15,3 +15,8 @@ function filterByRating(items: { title: string; rating: number }[]) {
 }
 
 
+function concatenateArrays<T>(...arrays: T[][]) {
+  let concatValue = arrays.reduce((acc, curr) => acc.concat(curr), [])
+  return concatValue
+  
+}
