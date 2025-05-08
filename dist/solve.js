@@ -23,4 +23,21 @@ function processValue(value) {
         return value * 2;
     }
 }
-console.log(processValue(22));
+function getMostExpensiveProduct(products) {
+    if (products.length === 0) {
+        return null;
+    }
+    let mostExpensiveProduct = products[0];
+    for (let product of products) {
+        if (product.price > mostExpensiveProduct.price) {
+            mostExpensiveProduct = product;
+        }
+    }
+    return mostExpensiveProduct;
+}
+const product = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+];
+console.log(getMostExpensiveProduct(product));
