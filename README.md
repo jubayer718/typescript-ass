@@ -21,6 +21,7 @@ ETC
 and have Many more uses.
 
 ### Example of Numeric Enum 
+```
 
 enum Direction{
   up,
@@ -31,9 +32,10 @@ enum Direction{
 
 let move: Direction= Direction.left;
 console.log(move) // Output: 2;
+```
  
 ### Example of string Enum 
-
+```
 enum Status{
   Success= "SUCCESS",
   Failure= "FAILURE",
@@ -43,17 +45,22 @@ enum Status{
 let response:Status= Status.Success;
 console.log(response); // Output: "SUCCESS"
 
+```
+
 ## Union and intersection 
 
 ### Union:
 * A union type allows a variable to be one of several types.  
 
 #### Example of intersection:
+```
 type ID= string | number;
 let userId: ID;
 userId = 123;  //yes
 userId="abc123; //yes
 userId= true: //no
+
+```
 
 ### Intersection(&) 
 * An intersection type combine multiple types into on type that must satisfy all of them. 
