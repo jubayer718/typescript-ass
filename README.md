@@ -42,3 +42,40 @@ enum Status{
 
 let response:Status= Status.Success;
 console.log(response); // Output: "SUCCESS"
+
+## Union and intersection 
+
+### Union:
+* A union type allows a variable to be one of several types.  
+
+#### Example of intersection:
+type ID= string | number;
+let userId: ID;
+userId = 123;  //yes
+userId="abc123; //yes
+userId= true: //no
+
+### Intersection(&) 
+* An intersection type combine multiple types into on type that must satisfy all of them. 
+
+```
+type Person={
+  name:string;
+  age: number;
+}
+
+type Employee = {
+  employeeId: number;
+  department: string;
+}
+
+type Staff = Person & Employee;
+
+const staffMember: Staff = {
+  name: "yusaf",
+  age 28,
+  employeeId; 1001,
+  department:"IT"
+}
+
+```
